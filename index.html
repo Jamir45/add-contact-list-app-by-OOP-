@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!-- Compiled and minified CSS -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+   <title>Contact List App</title>
+   <style>
+      body { 
+         background: #18183c;
+      }
+      .progress {
+         display: none;
+      }
+
+      .card-action.center-align.customStyle {
+         padding: 30px 0px;
+      }
+      form#contact-form {
+         margin: 0px 50px;
+      }
+      .btn-floating:hover {
+         background-color: #f82543;
+      }
+      .input-field.col.s12 {
+         margin: 5px 0px;
+      }
+      h5#task-title {
+         margin-top: 0px;
+      }
+   </style>
+</head>
+<body class="container">
+   
+   <div class="row">
+      <div class="col s0 m2"></div>
+      <div class='card col s12 m8'>
+         <div class="card-content row">
+            <h4 class="card-title col s12 center-align">Add New Contact</h4>
+            <form id="contact-form" class="row">
+               <div class="input-field col s12">
+                  <i class='material-icons prefix'>account_circle</i>
+                  <input type="text" name="name" id="name">
+                  <label for="name">Name</label>
+               </div>
+         
+               <div class="input-field col s12">
+                  <i class='material-icons prefix'>email</i>
+                  <input type="email" name="email" id="email">
+                  <label for="email">Email</label>
+               </div>
+         
+               <div class="input-field col s12">
+                  <i class='material-icons prefix'>phone</i>
+                  <input type="number" name="phone" id="phone">
+                  <label for="phone">Phone</label>
+               </div>
+         
+               <div class="input-field col s12">
+                  <i class='material-icons prefix'>event_note</i>
+                  <input type="text" class="datepicker" id="birthday">
+                  <label for="birthday">Date Of Birth</label>
+               </div>
+
+               <div class="center-align">
+                  <button class="btn waves-effect waves-light btn-large" type="submit" name="action" id="button">ADD NEW
+                     CONTACT
+                     <i class="material-icons right">add</i>
+                 </button>
+               </div>
+
+               <div class="progress col s12">
+                  <div class="indeterminate"></div>
+               </div>
+            </form>
+         </div>
+         <div class="card-action center-align customStyle">
+            <h5 id="task-title">CONTACT LIST</h5>
+            <div class="input-field col s12">
+                <input type="text" name="search" id="search">
+                <label for="search">Search By Name</label>
+            </div>
+            <table class="stripe">
+                <thead class="teal lighten-2 white-text">
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+
+                <tbody id="contact-list" class="pink lighten-5">
+                </tbody>
+            </table>
+        </div>
+      </div>
+      <div class="col s0 m2"></div>
+   </div>
+
+
+
+
+   <script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous"></script>
+   <!-- Compiled and minified JavaScript -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+   <!-- Custom JavaScript File -->
+   <!-- <script src="/app.js"></script> -->
+   <script src="/appES6.js"></script>
+   <script>
+      $(document).ready(function () {
+          $('.datepicker').datepicker();
+      });
+  </script>
+</body>
+</html>
